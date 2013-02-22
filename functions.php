@@ -54,3 +54,15 @@ function get_first_image() {
   }
   return $first_img;
 }
+
+/**
+ * Theme URI
+ * Shorter way to get the theme URI
+ */
+function theme_uri($path=null) {
+	$uri = get_stylesheet_directory_uri(); 	
+	if (isset($path)) {
+		$uri .= '/'.$path;
+	}
+	return $uri;
+}
