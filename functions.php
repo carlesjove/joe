@@ -66,3 +66,25 @@ function theme_uri($path=null) {
 	}
 	return $uri;
 }
+
+/**
+ * Featured img URI
+ * Just get the featured img URI. No stupid mark-up
+ */
+function featured_img_uri() {
+	global $post;
+	return wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+}
+
+/**
+ * Page title
+ * Returns the actual page title
+ */
+function page_title() {
+	$title = get_bloginfo( 'name' );
+	wp_title( '|', true, 'right' );
+	$site_description = get_bloginfo( 'description', 'display' );
+	if ( $site_description && ( is_home() || is_front_page() ) )
+		$title .= " | $site_description";
+	return $title;
+}
