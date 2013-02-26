@@ -1,10 +1,15 @@
 <?php
+/** 
+ * Honest Joe's Custom WordPress Functions
+ *
+ * Just a set of useful WordPress functions for your everyday life
+ */
 
 /** 
  * Get Post Attachements
  * Must use in the loop
  */
-function get_post_attachements($args=array()) {
+function joe_get_post_attachements($args=array()) {
 	global $post;
 	
 	/*
@@ -41,7 +46,7 @@ function get_post_attachements($args=array()) {
 /** 
  * Get First Image
  */
-function get_first_image() {
+function joe_get_first_image() {
   global $post, $posts;
   $first_img = '';
   ob_start();
@@ -59,7 +64,7 @@ function get_first_image() {
  * Theme URI
  * Shorter way to get the theme URI
  */
-function theme_uri($path=null) {
+function joe_theme_uri($path=null) {
 	$uri = get_stylesheet_directory_uri(); 	
 	if (isset($path)) {
 		$uri .= '/'.$path;
@@ -71,7 +76,7 @@ function theme_uri($path=null) {
  * Featured img URI
  * Just get the featured img URI. No stupid mark-up
  */
-function featured_img_uri() {
+function joe_featured_img_uri() {
 	global $post;
 	return wp_get_attachment_url(get_post_thumbnail_id($post->ID));
 }
@@ -80,7 +85,7 @@ function featured_img_uri() {
  * Page title
  * Returns the actual page title
  */
-function page_title() {
+function joe_page_title() {
 	$title = get_bloginfo( 'name' );
 	wp_title( '|', true, 'right' );
 	$site_description = get_bloginfo( 'description', 'display' );
