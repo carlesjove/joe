@@ -12,6 +12,8 @@ function get_joe() {
 		'post_categories',
 	);
 	
+	$errors = array();
+	
 	foreach ($joe_functions as $function) {
 		if ( function_exists('joe_'.$function) ) {
 			$errors[] = "<strong>{$function}</strong> already exists.";
