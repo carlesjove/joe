@@ -93,3 +93,25 @@ function joe_page_title() {
 		$title .= " | $site_description";
 	return $title;
 }
+
+/**
+ * Post Categories
+ * Returns the slug of all post categories as plain text
+ * 
+ * @return string
+ */
+function joe_post_categories(){
+	global $post;
+	$cats = wp_get_post_categories($post->ID);
+	foreach($cats as $c){
+		$cat = get_category( $c );
+		$categories[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
+	}
+	
+	$post_cats = '';
+	foreach($categories as $c){
+		$post_cats .= $c['slug'].' ';
+	}
+	
+	return $post_cats;
+}

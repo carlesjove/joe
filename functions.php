@@ -9,6 +9,7 @@ function get_joe() {
 		'theme_uri',
 		'featured_img_uri',
 		'page_title',
+		'post_categories',
 	);
 	
 	foreach ($joe_functions as $function) {
