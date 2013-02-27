@@ -1,8 +1,10 @@
 <?php
 /** 
  * Honest Joe's Custom WordPress Functions
- *
  * Just a set of useful WordPress functions for your everyday life
+ *
+ * @version 0
+ * @author Carles Jove i Buxeda | http://joanielena.cat
  */
 
 /** 
