@@ -27,8 +27,6 @@ function get_joe() {
 		}
 		echo "</ul>";
 	} else {
-		if ( file_exists('inc/joe_functions.php') ) {
-			include 'inc/joe_functions.php';
-		}
+		include 'inc/joe.php';
 	}
 }
