@@ -30,6 +30,6 @@ function get_joe() {
 		}
 		echo "</ul>";
 	} else {
-		include 'inc/joe.php';
+		include 'inc/joe/joe.php';
 	}
 }
