@@ -22,8 +22,8 @@ function get_joe() {
 	
 	if ( count($errors) > 0 ) {
 		echo "Some of Joe's functions already exist in your working environment."
-			 ."This can lead to issues, so we won't include Joe in the meal."
-			 ."Here's the conflictive functions:"
+			 ."This can lead to issues, so Joe's files have not been included."
+			 ."Here's the conflictive functions, in case you want to make something about it:"
 			 ."<ul>";
 		foreach ($errors as $error) {
 			echo "<li>{$error}</li>";
